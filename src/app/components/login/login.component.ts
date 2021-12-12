@@ -13,10 +13,6 @@ export class LoginComponent implements OnInit {
     contraseña: new FormControl('')
   })
 
-  usuarioControl = this.login.controls['usuario];
-  contraseña = this.login.controls['contraseña'];
-
-
   constructor() { }
 
   ngOnInit(): void {
@@ -25,5 +21,4 @@ export class LoginComponent implements OnInit {
   guardar(){
     console.log(this.login.value);
   }
-
 }
