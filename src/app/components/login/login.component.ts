@@ -8,21 +8,21 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  loginForm = new FormGroup ({
+  userForm = new FormGroup ({
     usuario: new FormControl('',[Validators.required]),
     contraseña: new FormControl('',[Validators.required])
   })
 
-  usuarioControl = this.loginForm.controls['usuario'];
-  contraseñaControl = this.loginForm.controls['contraseña'];
+  usuarioControl = this.userForm.controls['usuario'];
+  contraseñaControl = this.userForm.controls['contraseña'];
 
   constructor() { }
 
   ngOnInit(): void {
-    this.loginForm.controls['usuario'].valueChanges.subscribe(values => console.log('value changes',values));
+    this.userForm.controls['usuario'].valueChanges.subscribe(values => console.log('value changes',values));
   }
 
   guardar(){
-    console.log(this.loginForm.value);
+    console.log(this.userForm.value);
   }
 }
